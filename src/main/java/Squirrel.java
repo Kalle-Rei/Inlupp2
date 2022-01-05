@@ -11,7 +11,7 @@ public class Squirrel {
         isHungry = this.isHungry;
     }
 
-    public void eat(int numOfConesInNest){
+    public void eat(){
         numOfConesInNest--;
         isHungry = false;
     }
