@@ -12,6 +12,9 @@ public class Owl {
     }
 
     public void eat(PineTree pineTree){
-        isHungry = false;
+        if(pineTree.getNumOfSquirrels() > 0){
+            pineTree.removeSquirrel();
+            isHungry = false;
+        }
     }
 }
