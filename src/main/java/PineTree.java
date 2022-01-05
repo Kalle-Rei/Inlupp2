@@ -4,6 +4,7 @@ public class PineTree {
     private int numOfCones;
     private int age;
     private int windSpeed;
+    private static int numOfSquirrels = 0;
     private List<Squirrel> squirrels;
     private Owl owl;
     private boolean hasLumberJack = false;
@@ -24,4 +25,15 @@ public class PineTree {
     public void setNumOfCones(int numOfCones) {
         this.numOfCones = numOfCones;
     }
+
+    public void increaseNumOfSquirrels(){
+        numOfSquirrels++;
+    }
+
+    public void decreaseNumOfSquirrels(){
+        if (numOfSquirrels > 0){
+            numOfSquirrels--;
+        }
+    }
+
 }

@@ -11,7 +11,7 @@ public class Owl {
         this.isHungry = isHungry;
     }
 
-    public void eat(){
+    public void eat(PineTree pineTree){
         isHungry = false;
     }
 }
