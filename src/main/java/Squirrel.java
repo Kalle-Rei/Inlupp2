@@ -1,8 +1,8 @@
 public class Squirrel {
     private double weight;
     private int age;
-    private int numOfConesInNest;
-    private boolean isHungry;
+    private int numOfConesInNest = 10;
+    private boolean isHungry = true;
 
     public Squirrel(double weight, int age, int numOfConesInNest, boolean isHungry){
         weight = this.weight;
@@ -11,7 +11,7 @@ public class Squirrel {
         isHungry = this.isHungry;
     }
 
-    public void eat(){
+    public void eat(int numOfConesInNest){
         numOfConesInNest--;
         isHungry = false;
     }
