@@ -43,7 +43,7 @@ public class PineTree {
             numOfSquirrels--;
         }
     }
-    public static int getNumOfSquirrels(){
+    public int getNumOfSquirrels(){
         return numOfSquirrels;
     }
 
