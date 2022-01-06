@@ -1,13 +1,14 @@
 import java.util.ArrayList;
+import java.util.Random;
 
 public class PineTree {
     private int numOfCones;
     private int age;
     private int windSpeed;
-    private int numOfSquirrels = 0;
+    private int numOfSquirrels;
     private ArrayList<Squirrel> squirrels;
     private Owl owl;
-    private boolean hasLumberJack = false;
+    private boolean hasLumberJack;
 
     public PineTree(int numOfCones, int age, int windSpeed, ArrayList<Squirrel> squirrels, Owl owl, boolean hasLumberJack) {
         this.numOfCones = numOfCones;
@@ -26,17 +27,17 @@ public class PineTree {
     public int getNumOfCones() {
         return numOfCones;
     }
+
     public void setNumOfCones(int numOfCones) {
         this.numOfCones = numOfCones;
     }
-    public void increaseNumOfSquirrels(){
-        numOfSquirrels++;
-    }
+
     public void decreaseNumOfSquirrels(){
         if (numOfSquirrels > 0){
             numOfSquirrels--;
         }
     }
+
     public int getNumOfSquirrels(){
         return numOfSquirrels;
     }
@@ -49,7 +50,9 @@ public class PineTree {
     }
 
     public void fall(int windSpeed, int age, boolean hasLumberJack){
-        if((windSpeed > 20 && age > 80) || hasLumberJack){
+        Random random = new Random();
+        //if conditions are met there is a 70% chance of the tree falling
+        if(((windSpeed > 20 && age > 80) || hasLumberJack) && (random.nextInt(10) > 2)){
             // the tree falls and the squirrels disappear
             while(numOfSquirrels > 0){
                 removeSquirrel();
@@ -89,8 +92,5 @@ public class PineTree {
                 ", \nhasLumberJack=" + hasLumberJack +
                 '}';
     }
-    public String checkEat(){
-        return "squirrels=" + squirrels +
-                "\nowl=" + owl;
-    }
+
 }

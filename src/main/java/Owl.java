@@ -15,7 +15,17 @@ public class Owl {
         if(pineTree.getNumOfSquirrels() > 0){
             pineTree.removeSquirrel();
             isHungry = false;
+            // reduce height as the owl swoops down
+            setHeight(getHeight()-(getHeight()/2));
         }
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
     }
 
     @Override

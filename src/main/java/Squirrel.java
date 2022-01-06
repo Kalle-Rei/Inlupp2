@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Squirrel {
     private double weight;
     private int age;
@@ -12,12 +14,17 @@ public class Squirrel {
     }
 
     public void eat(PineTree pineTree){
+        Random random = new Random();
         if(numOfConesInNest > 0){
             numOfConesInNest--;
             isHungry = false;
+            //increase weight slightly after eating
+            setWeight(getWeight()+0.01);
         }
-        else if(pineTree.getNumOfCones() >= 10){
+        // if there is enough cones on the tree the squirrel has a 60% chance to succeed in refilling its nest
+        else if((pineTree.getNumOfCones() >= 10) && (random.nextInt(10) > 3)){
             refillNest(pineTree);
+            //recursive function call to eat from the recently filled nest
             eat(pineTree);
         }
     }
@@ -35,6 +42,14 @@ public class Squirrel {
 
     public void setNumOfConesInNest(int numOfConesInNest) {
         this.numOfConesInNest = numOfConesInNest;
+    }
+
+    public double getWeight() {
+        return weight;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
     }
 
     @Override
