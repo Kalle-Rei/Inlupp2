@@ -30,4 +30,14 @@ public class Squirrel {
     public void setNumOfConesInNest(int numOfConesInNest) {
         this.numOfConesInNest = numOfConesInNest;
     }
+
+    @Override
+    public String toString() {
+        return "Squirrel{" +
+                "weight=" + weight +
+                ", age=" + age +
+                ", numOfConesInNest=" + numOfConesInNest +
+                ", isHungry=" + isHungry +
+                '}';
+    }
 }
