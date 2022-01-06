@@ -17,4 +17,14 @@ public class Owl {
             isHungry = false;
         }
     }
+
+    @Override
+    public String toString() {
+        return "Owl{" +
+                "wingSpan=" + wingSpan +
+                ", age=" + age +
+                ", height=" + height +
+                ", isHungry=" + isHungry +
+                '}';
+    }
 }
