@@ -50,6 +50,7 @@ public class PineTree {
     public void fall(int windSpeed, int age, boolean hasLumberJack){
         if((windSpeed > 20 && age > 80) || hasLumberJack){
             // the tree falls
+            // skulle kunna kalla på en metod som tar bort alla ugglor och ekorrar från trädet här
         }
         else{
             // the tree doesn't fall
