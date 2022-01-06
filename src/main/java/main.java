@@ -12,6 +12,12 @@ public class main {
         squirrelList.add(squirrel2);
         Owl owl1 = new Owl(20,20,20, true);
         PineTree tree1 = new PineTree(200, 20,15, squirrelList, owl1, false);
+        tree1.updateNumOfSquirrels();
+        System.out.println("tree1: " + tree1.toString());
+        System.out.println("\ntree1.getNumOfSquirrels: " + tree1.getNumOfSquirrels());
+        owl1.eat(tree1);
+        System.out.println("\ncheckEat: " + tree1.checkEat());
+        System.out.println("\ntree1.getNumOfSquirrels: " + tree1.getNumOfSquirrels());
 
 
     }

@@ -4,7 +4,7 @@ public class PineTree {
     private int numOfCones;
     private int age;
     private int windSpeed;
-    private static int numOfSquirrels = 0;
+    private int numOfSquirrels = 0;
     private ArrayList<Squirrel> squirrels;
     private Owl owl;
     private boolean hasLumberJack = false;
@@ -77,9 +77,13 @@ public class PineTree {
                 "numOfCones=" + numOfCones +
                 ", age=" + age +
                 ", windSpeed=" + windSpeed +
-                ", squirrels=" + squirrels +
-                ", owl=" + owl +
-                ", hasLumberJack=" + hasLumberJack +
+                ", \nsquirrels=" + squirrels +
+                ", \nowl=" + owl +
+                ", \nhasLumberJack=" + hasLumberJack +
                 '}';
+    }
+    public String checkEat(){
+        return "squirrels=" + squirrels +
+                "\nowl=" + owl;
     }
 }
