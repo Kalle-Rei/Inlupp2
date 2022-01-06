@@ -5,10 +5,10 @@ public class Squirrel {
     private boolean isHungry = true;
 
     public Squirrel(double weight, int age, int numOfConesInNest, boolean isHungry){
-        weight = this.weight;
-        age = this.age;
-        numOfConesInNest = this.numOfConesInNest;
-        isHungry = this.isHungry;
+        this.weight = weight;
+        this.age = age;
+        this.numOfConesInNest = numOfConesInNest;
+        this.isHungry = isHungry;
     }
 
     public void eat(){
