@@ -73,6 +73,10 @@ public class PineTree {
         return hasLumberJack;
     }
 
+    public ArrayList<Squirrel> getSquirrels() {
+        return squirrels;
+    }
+
     @Override
     public String toString() {
         return "PineTree{" +
