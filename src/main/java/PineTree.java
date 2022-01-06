@@ -46,4 +46,14 @@ public class PineTree {
     public static int getNumOfSquirrels(){
         return numOfSquirrels;
     }
+
+    public void fall(int windSpeed, int age, boolean hasLumberJack){
+        if((windSpeed > 20 && age > 80) || hasLumberJack){
+            // the tree falls
+        }
+        else{
+            // the tree doesn't fall
+        }
+
+    }
 }
