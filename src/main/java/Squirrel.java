@@ -11,9 +11,15 @@ public class Squirrel {
         this.isHungry = isHungry;
     }
 
-    public void eat(){
-        setNumOfConesInNest(getNumOfConesInNest()-1);
-        isHungry = false;
+    public void eat(PineTree pineTree){
+        if(numOfConesInNest > 0){
+            numOfConesInNest--;
+            isHungry = false;
+        }
+        else if(pineTree.getNumOfCones() >= 10){
+            refillNest(pineTree);
+            eat(pineTree);
+        }
     }
 
     public void refillNest(PineTree pineTree){
