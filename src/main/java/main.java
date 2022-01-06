@@ -6,10 +6,10 @@ public class main {
         Owl owl1 = makeOwl();
         PineTree tree1 = makePineTree(squirrelList, owl1);
         System.out.println("tree1: " + tree1.toString());
-        System.out.println("\ntree1.getNumOfSquirrels: " + tree1.getNumOfSquirrels());
         owl1.eat(tree1);
         System.out.println("\ncheckEat: " + tree1.checkEat());
         System.out.println("\ntree1.getNumOfSquirrels: " + tree1.getNumOfSquirrels());
+        checkFall(tree1);
 
 
     }
@@ -29,5 +29,9 @@ public class main {
         PineTree tree1 = new PineTree(200, 20,15, squirrelList, owl1, false);
         tree1.updateNumOfSquirrels();
         return tree1;
+    }
+    public static void checkFall(PineTree pineTree){
+        pineTree.fall(pineTree.getWindSpeed(), pineTree.getAge(), true);
+        System.out.println("\ntree after fall(): " + pineTree.toString());
     }
 }

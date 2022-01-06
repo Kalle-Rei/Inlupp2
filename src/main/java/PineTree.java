@@ -18,18 +18,6 @@ public class PineTree {
         this.hasLumberJack = hasLumberJack;
     }
 
-//    public void addSquirrel(double weight, int age, int numOfConesInNest, boolean isHungry){
-//        Squirrel e = new Squirrel(weight, age, numOfConesInNest, isHungry);
-//        squirrels.add(e);
-//        increaseNumOfSquirrels();
-//    }
-
-    public void addSquirrel(Squirrel e){
-        squirrels.add(e);
-        increaseNumOfSquirrels();
-    }
-
-
     public void removeSquirrel() {
         squirrels.remove(0);
         decreaseNumOfSquirrels();
@@ -62,13 +50,27 @@ public class PineTree {
 
     public void fall(int windSpeed, int age, boolean hasLumberJack){
         if((windSpeed > 20 && age > 80) || hasLumberJack){
-            // the tree falls
-            // skulle kunna kalla på en metod som tar bort alla ugglor och ekorrar från trädet här
+            // the tree falls and the squirrels disappear
+            while(numOfSquirrels > 0){
+                removeSquirrel();
+            }
         }
         else{
             // the tree doesn't fall
         }
 
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public int getWindSpeed() {
+        return windSpeed;
+    }
+
+    public boolean isHasLumberJack() {
+        return hasLumberJack;
     }
 
     @Override
@@ -78,6 +80,7 @@ public class PineTree {
                 ", age=" + age +
                 ", windSpeed=" + windSpeed +
                 ", \nsquirrels=" + squirrels +
+                ", \ngetNumOfSquirrels=" + getNumOfSquirrels() +
                 ", \nowl=" + owl +
                 ", \nhasLumberJack=" + hasLumberJack +
                 '}';
