@@ -1,5 +1,0 @@
-1. Svara på fråga 1 i en separat txt-fil
-2. Uppdatera UML-diagram med alla metoder och fält vi lagt till
-3. Implementera metoden fall() i PineTree                                       --  FIXAT
-4. main metoden ska köra metoderna eat() och fall() med värden som vi ger den   --  FIXAT
-5. Draw.io-filen i Git.
