@@ -5,9 +5,7 @@ public class Owl extends Animal {
     public Owl(int wingSpan, int age, int height, boolean isHungry) {
         super(age, isHungry);
         this.wingSpan = wingSpan;
-        //this.age = age;
         this.height = height;
-        //this.isHungry = isHungry;
     }
 
     public void eat(PineTree pineTree){
