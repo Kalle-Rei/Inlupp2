@@ -7,7 +7,7 @@ public class Owl extends Animal {
         this.wingSpan = wingSpan;
         this.height = height;
     }
-
+    @Override
     public void eat(PineTree pineTree){
         if(pineTree.getNumOfSquirrels() > 0){
             pineTree.removeSquirrel();
