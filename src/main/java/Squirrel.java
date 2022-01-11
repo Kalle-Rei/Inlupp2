@@ -10,6 +10,7 @@ public class Squirrel extends Animal {
         this.numOfConesInNest = numOfConesInNest;
     }
 
+    @Override
     public void eat(PineTree pineTree){
         Random random = new Random();
         if(numOfConesInNest > 0){

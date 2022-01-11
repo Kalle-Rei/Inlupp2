@@ -1,4 +1,4 @@
-public class Animal {
+public abstract class Animal {
     protected int age;
     protected boolean isHungry;
 
@@ -6,4 +6,5 @@ public class Animal {
         this.age = age;
         this.isHungry = isHungry;
     }
+    public abstract void eat(PineTree pineTree);
 }
