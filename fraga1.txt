@@ -1,6 +1,0 @@
-
-1. Varför är romberna i Squirrel och Owls pilspetsar genomskinliga? De hade kunnat varit svarta.
-
-Svar: De är genomskinliga därför att relationerna är av typen Aggregation.
-Tar man bort parent-objektet så skulle inte child-objekten tas bort.
-(En composition skulle innebära att child-objekten är beroende av parent-objektet).
