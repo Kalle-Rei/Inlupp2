@@ -1,16 +1,15 @@
 import java.util.Random;
 
-public class Squirrel {
+public class Squirrel extends Animal {
     private double weight;
-    private int age;
     private int numOfConesInNest = 10;
-    private boolean isHungry = true;
 
     public Squirrel(double weight, int age, int numOfConesInNest, boolean isHungry){
+        super(age, isHungry);
         this.weight = weight;
-        this.age = age;
+        //this.age = age;
         this.numOfConesInNest = numOfConesInNest;
-        this.isHungry = isHungry;
+        //this.isHungry = isHungry;
     }
 
     public void eat(PineTree pineTree){

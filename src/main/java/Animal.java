@@ -1,6 +1,6 @@
 public class Animal {
-    private int age;
-    private boolean isHungry;
+    protected int age;
+    protected boolean isHungry;
 
     public Animal(int age, boolean isHungry){
         this.age = age;
