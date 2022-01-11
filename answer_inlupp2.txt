@@ -1,0 +1,1 @@
+Piltypen betyder ARV. Klasserna "Owl" och "Squirrel" ärver egenskaperna från klassen "Animal".
