@@ -7,9 +7,7 @@ public class Squirrel extends Animal {
     public Squirrel(double weight, int age, int numOfConesInNest, boolean isHungry){
         super(age, isHungry);
         this.weight = weight;
-        //this.age = age;
         this.numOfConesInNest = numOfConesInNest;
-        //this.isHungry = isHungry;
     }
 
     public void eat(PineTree pineTree){
